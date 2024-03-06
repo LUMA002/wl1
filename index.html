@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <!-- Bootstrap CSS && Custom CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Sidebar -->
+                <div class="sticky-top">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Навігація</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#" class="text-dark" onclick="openModal('modal1')">Завдання 1</a></li>
+                                <li class="list-group-item"><a href="#" class="text-dark" onclick="openModal('modal2')">Завдання 2</a></li>
+                                <li class="list-group-item"><a href="#" class="text-dark" onclick="openModal('modal3')">Завдання 3</a></li>
+                                <li class="list-group-item"><a href="#" class="text-dark" onclick="openModal('modal4')">Завдання 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal windows -->
+    <div id="modal1" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Завдання 1</h2>
+                <p>Знайти найчастiший елемент у масивi. Напишiть функцiю JavaScript, яка приймає масив елементiв як вхiднi данi та знаходить елемент у масивi, що зустрiчається найчастiше, та повертає цей елемент.</p>
+                <p1>Введіть масив чисел через кому:</p1>
+            <input type="text" id="arrayInput">
+            <button onclick="findMostFrequentElementHandler()">Знайти найчастіший елемент</button>
+            <p id="result1"></p>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Завдання 2</h2>
+                <p>Контроль введення даних. Поступово вводиться набір чисел. Якщо число повторюється, то вивести повідомлення, що таке число вже введено.</p>
+                <p>Поступово введіть числа:</p>
+                <input type="number" id="numberInput">
+                <button onclick="checkDuplicateNumber(Number(document.getElementById('numberInput').value))">Перевірити число</button>
+                <p id="result2"></p>
+                <button onclick="displayEnteredNumbers()">Показати введені числа</button>
+                <p id="enteredNumbers"></p>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Завдання 3</h2>
+                <p>Пiдрахувати кiлькiсть голосних у рядку. Напишiть функцiю JavaScript, яка приймає рядок як вхiднi данi та пiдраховує кiлькiсть голосних (a, e, i, o, u) у рядку, повертаючи кiлькiсть.</p>
+                <p>Введіть рядок:</p>
+                <input type="text" id="stringInput">
+                <button onclick="countVowelsHandler()">Пiдрахувати голоснi</button>
+                <p id="result3"></p>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Завдання 4 (своє)</h2>
+                <p>Калькулятор переведення чисел з десяткової системи числення у двійкову.</p>
+                <p>Введіть число для його переведення в бінарний вигляд:</p>
+                <input type="number" id="decimalInput">
+                <button onclick="decimalToBinaryHandler()">Перевести в двійкову</button>
+                <p id="result4"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <h2>Про мене</h2>
+                <img src="/img/yabuki.jpg" alt="Your Photo" class="profile-photo">
+                <p>Малованюк Станіслав Михайлович, 201-Б, а це фрагмент мого мотиваційного листа: "Вважаю, що навчання в Чернівецькому національному університеті імені Юрія Федьковича допоможе мені позбутися власних слабких сторін, проявити свій творчий потенціал, реалізувати себе як особистість." ʕ•́ᴥ•̀ʔっ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
